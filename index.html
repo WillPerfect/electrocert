@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>电子证书/文件验证</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="header-content">
+    <img src="ce_css_logo.png" alt="CCS Logo" class="logo-img" />
+    <div class="logo">CCS 中国船级社</div>
+  </div>
+  <h1>电子证书/文件验证</h1>
+</header>
+
+<div class="container">
+  <!-- 左侧部分 -->
+  <div class="left-section">
+    <p>CCS向船舶管理公司推荐电子证书以及检查文件电子化服务...</p>
+    <p>电子证书可以代替纸质证书...</p>
+    <p><strong>1、电子证书</strong></p>
+    <p>CCS签发的电子证书与纸质证书具有同等效力，经船舶所有人、经营人或管理人同意，可代替纸质证书使用。电子证书与纸质证书具有同等的法律效力，用人单位应当认可。</p>
+    <p><strong>2、电子文件</strong></p>
+    <p>请查询客户使用电子文件相关操作指南。电子文件是指以电子形式存在的、按照规定的格式记录在磁性介质或光盘等载体上的信息。船舶电子文件服务包括：国际安全管理(ISM)体系文件、船舶安全防护体系(ISPS)文件、国际海事劳工公约(MLC)合规文件等。</p>
+    <p><strong>3、验证方式</strong></p>
+    <p>用户可通过输入证书编号、IMO编号、船舶登记号、公司编号、账单编号或工作控制号等信息进行查询。系统会根据输入的信息快速定位相应的电子证书或文件，并显示相关的证书有效期、签发机构等详细信息。</p>
+    <p><strong>4、安全保障</strong></p>
+    <p>所有查询均需通过验证码验证，确保查询的安全性和隐私保护。验证码具有一次性特征，每次查询都需要重新输入最新的验证码，防止未授权的访问。</p>
+  </div>
+
+  <!-- 右侧部分 -->
+  <div class="right-section">
+    <!-- 错误提示 -->
+    <div id="topWarning" class="warning-top" style="display:none;"></div>
+    <div class="card">
+      <p class="hint">请填写查询信息然后点击验证。</p>
+
+      <label>UTN</label>
+      <div class="utn">
+        <input type="text" placeholder="" />
+        <span>-</span>
+        <input type="text" placeholder="" />
+      </div>
+
+      <label>证书编号、IMO编号、船舶登记号、公司编号、账单编号、工作控制号</label>
+      <input type="text" id="certInput" placeholder="" />
+
+      <label>验证码</label>
+      <div class="captcha">
+        <input type="text" id="captchaInput" placeholder="请输入验证码" />
+        <div id="captchaCode" class="captcha-code"></div>
+      </div>
+
+      <button class="btn" onclick="verify()">验证</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>All Rights Reserved. Copyright © China Classification Society webmaster@ccs.org.cn Copyright 1996－2021</p>
+  <p>CCS Legal Statement Jing ICP No. 12032711-1</p>
+</footer>
+
+<script src="verify.js"></script>
+</body>
+</html>
