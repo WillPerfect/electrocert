@@ -429,6 +429,10 @@ input[type="text"]:focus {
   /* Page2 特殊样式 */
   .page2-container {
     flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0;
+    gap: 0;
+    padding: 0;
   }
 
   .page2-left {
@@ -436,15 +440,49 @@ input[type="text"]:focus {
   }
 
   .page2-right {
-    flex: 0 0 605px;
-    height: 680px;
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
     margin-left: 0;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  body.page2-body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container.page2-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    margin: 0;
+    padding: 16px;
+  }
+
+  .cert-info {
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .btn-view {
+    padding: 12px 40px;
+    font-size: 14px;
+  }
+
+  .footer {
+    margin: 0;
   }
 }
 
 @media (max-width: 600px) {
   .page2-right {
     flex: 0 0 100%;
+    width: 100%;
     height: auto;
   }
 }
