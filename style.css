@@ -268,14 +268,40 @@ input[type="text"]:focus {
     padding: 16px;
   }
 
+  body.page2-body .header {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 12px;
+    align-items: center;
+  }
+
+  body.page2-body .logo-img {
+    height: 50px;
+    width: auto;
+    flex-shrink: 0;
+  }
+
   .header-content {
     width: 100%;
     justify-content: center;
   }
 
+  body.page2-body .header-content {
+    width: auto;
+    justify-content: flex-start;
+  }
+
   .header h1 {
     text-align: center;
     font-size: 20px;
+  }
+
+  body.page2-body .header h1 {
+    text-align: left;
+    font-size: 28px;
+    margin: 0;
+    flex: 0;
   }
 
   .container {
