@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Certificate & E-Document Verification</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="header-content">
+    <img src="ce_css_logo.png" alt="CCS Logo" class="logo-img" />
+  </div>
+  <h1>E-Certificate & E-Document Verification</h1>
+  <div class="header-right">
+    <a href="index.html" class="lang-link">Back</a>
+  </div>
+</header>
+
+<div class="container page2-container">
+  <!-- 右侧部分（证书信息） -->
+  <div class="right-section page2-right">
+    <div class="cert-info">
+      <div class="cert-status">
+        <div class="status-badge">VALID</div>
+        <div class="status-text">The certificate specified below is valid.</div>
+      </div>
+
+      <table class="cert-table">
+        <tr>
+          <td class="label">UTN</td>
+          <td class="value" id="utnValue">P026-10241201</td>
+        </tr>
+        <tr>
+          <td class="label">Cert. No.</td>
+          <td class="value" id="certValue">SH25PPS03982</td>
+        </tr>
+        <tr>
+          <td class="label">Product</td>
+          <td class="value" id="productValue">-</td>
+        </tr>
+        <tr>
+          <td class="label">Manufacturer</td>
+          <td class="value">Shanghai Aero-Industries International Corporation</td>
+        </tr>
+        <tr>
+          <td class="label">Issued date</td>
+          <td class="value" id="dateValue">-</td>
+        </tr>
+        <tr>
+          <td class="label">Serial No.</td>
+          <td class="value" id="snValue">-</td>
+        </tr>
+      </table>
+
+      <div class="cert-actions">
+        <button class="btn-view" onclick="openCertificate()">View</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>All Rights Reserved. Copyright © China Classification Society webmaster@ccs.org.cn Copyright 1996－2021</p>
+  <p>CCS Legal Statement Jing ICP No. 12032711-1</p>
+</footer>
+
+<script src="page2.js"></script>
+</body>
+</html>

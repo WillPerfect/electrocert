@@ -140,7 +140,12 @@ function verify() {
     
     // 延迟 300ms 后跳转，确保 sessionStorage 已保存
     setTimeout(() => {
-      window.location.href = 'electrocert_veryfication_getCheckResult.page.html';
+      // 根据设备宽度判断是否为手机
+      const isMobile = window.innerWidth <= 768;
+      const targetPage = isMobile 
+        ? 'electrocert_veryfication_getCheckResult.page-en.html' 
+        : 'electrocert_veryfication_getCheckResult.page.html';
+      window.location.href = targetPage;
     }, 300);
   } catch (error) {
     console.error('验证过程出错:', error);
