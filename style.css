@@ -271,7 +271,7 @@ input[type="text"]:focus {
   body.page2-body .header {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 5px;
     padding: 12px;
   }
