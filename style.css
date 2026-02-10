@@ -269,11 +269,11 @@ input[type="text"]:focus {
   }
 
   body.page2-body .header {
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     gap: 10px;
     padding: 12px;
-    align-items: center;
   }
 
   body.page2-body .logo-img {
@@ -290,6 +290,7 @@ input[type="text"]:focus {
   body.page2-body .header-content {
     width: auto;
     justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .header h1 {
@@ -301,7 +302,7 @@ input[type="text"]:focus {
     text-align: left;
     font-size: 28px;
     margin: 0;
-    flex: 0;
+    width: 100%;
   }
 
   .container {
