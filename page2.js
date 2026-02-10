@@ -48,14 +48,22 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // 从 sessionStorage 中获取用户输入的信息
-  const utn1 = sessionStorage.getItem('utn1');
-  const utn2 = sessionStorage.getItem('utn2');
-  const cert = sessionStorage.getItem('cert');
+  let utn1 = sessionStorage.getItem('utn1');
+  let utn2 = sessionStorage.getItem('utn2');
+  let cert = sessionStorage.getItem('cert');
 
-  // 如果没有获取到信息，说明用户没有通过验证，重定向回首页
+  // 如果没有获取到信息，使用 validateData 中的第一条记录作为默认值
   if (!utn1 || !utn2 || !cert) {
-    window.location.href = 'index.html';
-    return;
+    if (validateData.validate && validateData.validate.length > 0) {
+      const defaultRecord = validateData.validate[0];
+      utn1 = defaultRecord['utn-1'];
+      utn2 = defaultRecord['utn-2'];
+      cert = defaultRecord['certificate'];
+    } else {
+      // 如果没有默认数据，则重定向回首页
+      window.location.href = 'index.html';
+      return;
+    }
   }
 
   // 更新 UTN 行的显示
