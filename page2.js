@@ -1,3 +1,17 @@
+// 数据验证列表
+const validateData = {
+  validate: [
+    {
+      "utn-1": "P026",
+      "utn-2": "10241201",
+      "certificate": "SH25PPS03982",
+      "product": "Air Compressor",
+      "date": "2026-02-05",
+      "sn": "18AI801~804"
+    }
+  ]
+};
+
 // 生成随机验证码
 function generateCaptcha() {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -56,16 +70,42 @@ document.addEventListener('DOMContentLoaded', function() {
     certValue.textContent = cert;
   }
 
-  // 保存 PDF 文件名到全局变量，供 openCertificate 函数使用
-  window.pdfFileName = utn1 + '-' + utn2 + '-' + cert + '.pdf';
+  // 从validateData中查找对应的记录，获取product, date, sn信息
+  const record = validateData.validate.find(item => 
+    item['utn-1'] === utn1 && item['utn-2'] === utn2 && item['certificate'] === cert
+  );
+
+  if (record) {
+    // 更新产品名称
+    const productValue = document.getElementById('productValue');
+    if (productValue) {
+      productValue.textContent = record.product;
+    }
+
+    // 更新签发日期
+    const dateValue = document.getElementById('dateValue');
+    if (dateValue) {
+      dateValue.textContent = record.date;
+    }
+
+    // 更新序号
+    const snValue = document.getElementById('snValue');
+    if (snValue) {
+      snValue.textContent = record.sn;
+    }
+
+    // 保存 PDF 文件信息
+    window.certificateValue = record.certificate;
+  }
 });
 
 // 打开证书 PDF 文件
 function openCertificate() {
-  const pdfFileName = window.pdfFileName;
-  if (pdfFileName) {
-    // 尝试打开 PDF 文件
-    window.open(pdfFileName, '_blank');
+  const certValue = window.certificateValue;
+  if (certValue) {
+    // 使用新的URL格式
+    const pdfUrl = 'sqdownloadEcertPdf.do!fileName=' + certValue + '.pdf';
+    window.open(pdfUrl, '_blank');
   } else {
     alert('无法获取证书文件');
   }

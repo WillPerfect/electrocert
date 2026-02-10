@@ -130,7 +130,7 @@ function verify() {
     }
 
     // 所有验证通过
-    console.log('验证通过，准备跳转到 page2...');
+    console.log('验证通过，准备跳转到验证结果页面...');
     hideWarning();
     
     // 保存用户输入到 sessionStorage
@@ -140,7 +140,7 @@ function verify() {
     
     // 延迟 300ms 后跳转，确保 sessionStorage 已保存
     setTimeout(() => {
-      window.location.href = 'page2.html';
+      window.location.href = 'electrocert_veryfication_getCheckResult.page.html';
     }, 300);
   } catch (error) {
     console.error('验证过程出错:', error);
