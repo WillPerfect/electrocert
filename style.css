@@ -84,8 +84,18 @@ body {
   margin-bottom: 12px;
 }
 
-.left-section strong {
-  color: #666;
+.left-section a {
+  color: #005bac;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.left-section a:hover {
+  text-decoration: underline;
+}
+
+.left-section a i {
+  margin-right: 4px;
 }
 
 .right-section {
@@ -407,15 +417,26 @@ input[type="text"]:focus {
 
 /* Page2 响应式设计 */
 @media (max-width: 768px) {
-  .cert-info {
-    padding: 20px;
-  }
+/* Page2 特殊样式 */
+.page2-container {
+  flex-wrap: wrap;
+}
 
-  .cert-table .label {
-    width: auto;
-  }
+.page2-left {
+  flex: 0 0 420px;
+  padding: 30px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  color: #666;
+  line-height: 1.6;
+}
 
-  .btn-view {
-    padding: 12px 40px;
-  }
+.page2-left p {
+  margin-bottom: 12px;
+}
+
+.page2-right {
+  flex: 1;
+  margin-left: 40px;
 }

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>电子证书/文件验证</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,26 +12,30 @@
 <header class="header">
   <div class="header-content">
     <img src="ce_css_logo.png" alt="CCS Logo" class="logo-img" />
-    <div class="logo">CCS 中国船级社</div>
   </div>
   <h1>电子证书/文件验证</h1>
+  <div class="header-right">
+    <a href="index.html" class="lang-link">返回</a>
+  </div>
 </header>
 
-<div class="container">
-  <!-- 左侧部分 -->
-  <div class="left-section">
+<div class="container page2-container">
+  <!-- 左侧部分（验证表单） -->
+  <div class="left-section page2-left">
+    <!-- 错误提示 -->
+    <div id="topWarning" class="warning-top" style="display:none;"></div>
     <div class="card">
       <p class="hint">请填写查询信息然后点击验证。</p>
 
       <label>UTN</label>
       <div class="utn">
-        <input type="text" value="" />
+        <input type="text" placeholder="" />
         <span>-</span>
-        <input type="text" value="" />
+        <input type="text" placeholder="" />
       </div>
 
       <label>证书编号、IMO编号、船舶登记号、公司编号、账单编号、工作控制号</label>
-      <input type="text" value="" />
+      <input type="text" id="certInput" placeholder="" />
 
       <label>验证码</label>
       <div class="captcha">
@@ -38,12 +43,12 @@
         <div id="captchaCode" class="captcha-code"></div>
       </div>
 
-      <button class="btn" onclick="verify()">验证</button>
+      <button class="btn" onclick="return false;">验证</button>
     </div>
   </div>
 
-  <!-- 右侧部分 -->
-  <div class="right-section">
+  <!-- 右侧部分（证书信息） -->
+  <div class="right-section page2-right">
     <div class="cert-info">
       <div class="cert-status">
         <div class="status-badge">VALID</div>
@@ -53,11 +58,11 @@
       <table class="cert-table">
         <tr>
           <td class="label">UTN</td>
-          <td class="value">P026-10374721</td>
+          <td class="value" id="utnValue">P026-10241201</td>
         </tr>
         <tr>
           <td class="label">证书号</td>
-          <td class="value">SH25PPS04726</td>
+          <td class="value" id="certValue">SH25PPS03982</td>
         </tr>
         <tr>
           <td class="label">产品名称</td>
