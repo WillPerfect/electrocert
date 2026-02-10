@@ -288,9 +288,9 @@ input[type="text"]:focus {
   }
 
   body.page2-body .header-content {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    width: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .header h1 {
