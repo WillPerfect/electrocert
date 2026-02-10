@@ -7,7 +7,8 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f7fa;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -16,7 +17,7 @@ body {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 20px;
+  margin: 0;
   justify-content: space-between;
 }
 
@@ -62,14 +63,16 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  width: 1250px;
   margin: 40px auto;
   display: flex;
   gap: 40px;
+  padding: 0 20px;
 }
 
 .left-section {
-  flex: 1;
+  flex: 0 0 605px;
+  height: 680px;
   display: block;
   background: white;
   padding: 30px;
@@ -78,6 +81,7 @@ body {
   color: #666;
   font-size: 13px;
   line-height: 1.6;
+  overflow-y: auto;
 }
 
 .left-section p {
@@ -87,7 +91,8 @@ body {
 .left-section a {
   color: #005bac;
   text-decoration: none;
-  margin-left: 5px;
+  display: block;
+  margin-top: 8px;
 }
 
 .left-section a:hover {
@@ -99,7 +104,8 @@ body {
 }
 
 .right-section {
-  flex: 0 0 420px;
+  flex: 0 0 605px;
+  height: 680px;
   background: white;
   padding: 30px;
   border-radius: 6px;
@@ -127,6 +133,7 @@ label {
 
 input[type="text"] {
   width: 100%;
+  max-width: 250px;
   padding: 8px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -147,7 +154,7 @@ input[type="text"]:focus {
 }
 
 .utn input {
-  flex: 1;
+  flex: 0 0 100px;
 }
 
 .utn span {
@@ -219,6 +226,8 @@ input[type="text"]:focus {
   color: #666;
   font-size: 12px;
   border-top: 1px solid #e5e5e5;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .footer p {
