@@ -271,8 +271,8 @@ input[type="text"]:focus {
   body.page2-body .header {
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: center;
+    gap: 5px;
     padding: 12px;
   }
 
@@ -288,9 +288,9 @@ input[type="text"]:focus {
   }
 
   body.page2-body .header-content {
-    width: auto;
-    justify-content: flex-start;
-    align-items: flex-start;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .header h1 {
@@ -299,8 +299,8 @@ input[type="text"]:focus {
   }
 
   body.page2-body .header h1 {
-    text-align: left;
-    font-size: 28px;
+    text-align: center;
+    font-size: 20px;
     margin: 0;
     width: 100%;
   }
