@@ -1,14 +1,3 @@
-// 验证数据（直接嵌入，避免 fetch 跨域问题）
-const validateData = {
-  "validate": [
-    {
-      "utn-1": "P026",
-      "utn-2": "10241201",
-      "certificate": "SH25PPS03982"
-    }
-  ]
-};
-
 // 生成随机验证码
 function generateCaptcha() {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';

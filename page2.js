@@ -1,17 +1,3 @@
-// 数据验证列表
-const validateData = {
-  validate: [
-    {
-      "utn-1": "P026",
-      "utn-2": "10241201",
-      "certificate": "SH25PPS03982",
-      "product": "Air Compressor",
-      "date": "2026-02-05",
-      "sn": "18AI801~804"
-    }
-  ]
-};
-
 // 生成随机验证码
 function generateCaptcha() {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
